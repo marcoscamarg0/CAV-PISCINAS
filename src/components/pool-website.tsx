@@ -29,7 +29,6 @@ const PoolWebsite = () => {
         </nav>
       </header>
 
-      {/* Hero Section */}
       <section className="relative h-[300px] sm:h-[400px] md:h-[500px]">
         <div className="absolute inset-0 bg-cyan-500/20">
           <img
@@ -46,7 +45,7 @@ const PoolWebsite = () => {
       </section>
 
       {/* Galeria de Projetos */}
-      <section className="py-8 sm:py-12 md:py-16 container mx-auto px-4">
+      <section id="galeria"className="py-8 sm:py-12 md:py-16 container mx-auto px-4">
         <h2 className="text-2xl sm:text-3xl text-cyan-700 text-center mb-4 sm:mb-8">Galeria de projetos</h2>
         <p className="text-center mb-8 sm:mb-12 text-gray-600 px-4">
           Enjoy every moment of your life with us
@@ -71,7 +70,7 @@ const PoolWebsite = () => {
       </section>
 
       {/* Formas e Tamanhos */}
-      <section className="py-8 sm:py-12 md:py-16 bg-gray-50">
+      <section id="projetos" className="py-8 sm:py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl text-cyan-700 text-center mb-4 sm:mb-8">
             Formas e tamanhos de piscinas
@@ -97,7 +96,7 @@ const PoolWebsite = () => {
       </section>
 
       {/* Contato */}
-      <section className="py-8 sm:py-12 md:py-16 bg-white">
+      <section id="contato"className="py-8 sm:py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="text-center md:text-left">
