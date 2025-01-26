@@ -1,3 +1,6 @@
+import ContactForm from './contact-form';
+
+
 
 const PoolWebsite = () => {
   const poolTypes = [
@@ -9,14 +12,8 @@ const PoolWebsite = () => {
     { name: 'Xingu R', width: '6.00m', length: '3.00m', depth: '1.40m' }
   ];
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    // Lógica para manipular o envio do formulário
-  };
-
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
       <header className="bg-white p-4 sticky top-0 z-50 shadow-sm">
         <nav className="container mx-auto flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
           <img src="/logo.png" alt="Logo" className="w-16 sm:w-12 h-16 sm:h-12" />
@@ -43,12 +40,32 @@ const PoolWebsite = () => {
           </h1>
         </div>
       </section>
-
-      {/* Galeria de Projetos */}
-      <section id="galeria"className="py-8 sm:py-12 md:py-16 container mx-auto px-4">
+      <section id="sobre" className="py-16 bg-white">
+  <div className="container mx-auto px-4">
+    <div className="flex flex-col md:flex-row items-center gap-8">
+      <div className="w-full md:w-1/2">
+        <img 
+          src="/logo.png" 
+          alt="Logo da empresa" 
+          className="w-64 h-64 mx-auto md:mx-0 object-contain"
+        />
+      </div>
+      <div className="w-full md:w-1/2 text-center md:text-left">
+        <h2 className="text-3xl text-cyan-700 font-semibold mb-4">Sobre Nós</h2>
+        <p className="text-gray-600 leading-relaxed">
+          Há mais de 5 anos no mercado, somos especialistas em transformar seu espaço em um ambiente de lazer único. 
+          Nossa empresa é reconhecida pela excelência em construção de piscinas, oferecendo soluções personalizadas 
+          que atendem às necessidades específicas de cada cliente. Trabalhamos com materiais de alta qualidade e 
+          equipe especializada, garantindo durabilidade e satisfação em cada projeto.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+      <section id="galeria" className="py-8 sm:py-12 md:py-16 container mx-auto px-4">
         <h2 className="text-2xl sm:text-3xl text-cyan-700 text-center mb-4 sm:mb-8">Galeria de projetos</h2>
         <p className="text-center mb-8 sm:mb-12 text-gray-600 px-4">
-          Enjoy every moment of your life with us
+        Transforme seu lazer em um verdadeiro paraíso
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {[1, 2, 3].map((item) => (
@@ -58,18 +75,12 @@ const PoolWebsite = () => {
                 alt={`Projeto ${item}`}
                 className="w-full h-48 sm:h-56 md:h-64 object-cover"
               />
-              <div className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-semibold mb-2">Lorem ipsum</h3>
-                <p className="text-gray-600 text-sm sm:text-base">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </div>
+
             </div>
           ))}
         </div>
       </section>
 
-      {/* Formas e Tamanhos */}
       <section id="projetos" className="py-8 sm:py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl text-cyan-700 text-center mb-4 sm:mb-8">
@@ -95,8 +106,7 @@ const PoolWebsite = () => {
         </div>
       </section>
 
-      {/* Contato */}
-      <section id="contato"className="py-8 sm:py-12 md:py-16 bg-white">
+      <section id="contato" className="py-8 sm:py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="text-center md:text-left">
@@ -105,40 +115,11 @@ const PoolWebsite = () => {
                 Solicite seu orçamento agora mesmo e transforme sua ideia em realidade
               </p>
             </div>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <h3 className="text-xl sm:text-2xl mb-4">Junte-se à nossa lista!</h3>
-              <p className="mb-6 text-sm sm:text-base">
-                Vamos discutir juntos o pool dos seus sonhos.
-              </p>
-              <div className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Nome Completo"
-                  className="w-full p-2 sm:p-3 border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
-                <input
-                  type="text"
-                  placeholder="Número de telefone"
-                  className="w-full p-2 sm:p-3 border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
-                <input
-                  type="email"
-                  placeholder="E-mail"
-                  className="w-full p-2 sm:p-3 border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 text-white py-2 sm:py-3 px-4 rounded hover:bg-blue-700 transition-colors"
-                >
-                  Enviar agora
-                </button>
-              </div>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-gray-50 py-6 sm:py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
