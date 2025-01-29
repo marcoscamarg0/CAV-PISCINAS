@@ -128,7 +128,7 @@ const PoolWebsite = () => {
               <p className="text-sm sm:text-base">Siga nossas redes sociais</p>
               <div className="flex gap-4">
                 <a href="#" className="text-blue-600 hover:text-blue-700 transition-colors">Facebook</a>
-                <a href="https://www.instagram.com/cav_instalacoes/" className="text-blue-600 hover:text-blue-700 transition-colors">Instagram</a>
+                <a href="https://www.instagram.com/cav_instalacoes/" target=”_blank”>Link</a> className="text-blue-600 hover:text-blue-700 transition-colors">Instagram</a>
               </div>
             </div>
             <button className="bg-blue-600 text-white px-4 sm:px-6 py-2 rounded hover:bg-blue-700 transition-colors w-full sm:w-auto">
